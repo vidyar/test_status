@@ -5,5 +5,6 @@ python:
 install: echo "Nothing to install"
 before_script: echo $VIRTUALENV_PYTHON
 script:
- - echo "Waiting for 30 seconds"
- - sleep 30
+ - if ["$VIRTUALENV_PYTHON" == "2.6"] echo "bail out now"
+ - echo "Waiting for 10 seconds"
+ - sleep 10
