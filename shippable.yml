@@ -4,5 +4,5 @@ python:
  - 2.7
 install: echo "Nothing to install"
 script:
- - echo "Waiting for 30 seconds"
- - sleep 30
+ - echo "Waiting for 60 seconds"
+ - sleep 60
