@@ -9,7 +9,3 @@ script:
  - if [ "$VIRTUALENV_PYTHON" == "2.6" ]; then echo "bail out now"; exit 1; fi
  - echo "Waiting for 10 seconds"
  - sleep 10
-notifications:
-  email:
-     - vidya@shippable.com 
-     - vidyac.raghav@gmail.com
