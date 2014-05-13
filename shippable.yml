@@ -4,6 +4,7 @@ python:
  - 2.7
 install: echo "Nothing to install"
 
+
 before_script: echo $VIRTUALENV_PYTHON
 script:
  - if [ "$VIRTUALENV_PYTHON" == "2.6" ]; then echo "bail out now"; exit 1; fi
