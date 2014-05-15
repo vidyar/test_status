@@ -12,3 +12,4 @@ script:
  - sleep 10
  - cp $filename ./name.txt
  - cat $filename
+ - cat name.txt
