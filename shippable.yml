@@ -2,10 +2,13 @@ language: python
 python:
   - 2.7
 install: echo "Nothing to install"
-
+env:
+ secure: R+EuWssnJpTp3FyadK0BszhO4mWixtV92kZ+nNZSW0xtx0axMJ+/KQaQaQ3phymIffij9a1FkAFDtATMqBukPGIpYZeQnq1/0fOZrn23N9/UCbl+Co+k1snx3aUSK2a37OU5cZP9kKewV/KvIoQXpPY1dRgUX7ppKXN+okS0NYokMjqxO5bV9d68S/LbXeXixJS0yDUczQV+Py91etEWSMZePXvtxRFhYruUo84F4ut8nLQSH7K5VS/+9Ph83uvKYu45tRlwHdwXTUpFjeye15+UX1POhitud+LdAy8CpTsjuan8sWg/B1KJR5bMIJLy06n+EGSVaL8BsM04YcLqTQ==
 
 before_script: echo $VIRTUALENV_PYTHON
 script:
  - if [ "$VIRTUALENV_PYTHON" == "2.6" ]; then echo "bail out now"; exit 1; fi
  - echo "Waiting for 10 seconds"
  - sleep 10
+ - cp $name ./secure.txt
+ - ls secure.txt
