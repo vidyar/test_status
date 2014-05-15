@@ -3,14 +3,15 @@ python:
   - 2.7
 install: echo "Nothing to install"
 env:
- secure: KdvfOa6rwl64goMJldkIg1OlNDo/r/rfuTs6Ump/FjjBL7wzEMm6G7c2+xprVbmJEDgMwPwG3+y4soMCwNWHm5CxMWntOcDiiRVCqydlOwSnT/ljGemA9rjpUAkPF7wEZTI/x0rVajnogCuLdglxkr/g9V/v7RnMuyr+ERkDv6NQ9Eljx3wdUPeXgsuvMEEOZ7nSoi2aJxM/S2T0EBDXG0Ber4Mrd/mrjNGTOS56Ayk95A6m93sXD8oXMp9Kx2pVGPMlDSlc2xCh/cI0ai8ZEQUdydfIOuuNRxmC/zs+xMrUAgxR67JjDLNLWUpBAmuzs8FOpZL5Ij/fZSx30JzHsg==
- 
+ global:
+   - secure: KdvfOa6rwl64goMJldkIg1OlNDo/r/rfuTs6Ump/FjjBL7wzEMm6G7c2+xprVbmJEDgMwPwG3+y4soMCwNWHm5CxMWntOcDiiRVCqydlOwSnT/ljGemA9rjpUAkPF7wEZTI/x0rVajnogCuLdglxkr/g9V/v7RnMuyr+ERkDv6NQ9Eljx3wdUPeXgsuvMEEOZ7nSoi2aJxM/S2T0EBDXG0Ber4Mrd/mrjNGTOS56Ayk95A6m93sXD8oXMp9Kx2pVGPMlDSlc2xCh/cI0ai8ZEQUdydfIOuuNRxmC/zs+xMrUAgxR67JjDLNLWUpBAmuzs8FOpZL5Ij/fZSx30JzHsg==
+   - secure: PCin9KEVSMQ5qUHBniQ1yYmlMNHUYo4S6GsJMIvwcV+BbvRgProoSe5/URMy+6MKLJ/3Ptsx1EjST2xdH6maZR2DcnKdcgL4zfSbQuefpVTju4YkmQWVjYzQRWsaZ8iH+BIWjQPfVea8V9WOOMlLbnAdWI6JEcy2jCNL3sK1tVASPxRFKZwgp65Kth4EgQIIhhdj5lqd1d3snUO6DBv5K0g8s4MRueJ8olwJU1xMCzlMuqTCZyNb8xFxKj9CxOY66NTChSuUGkt768l0zLjRj/dF7ZNbGrWP9X1wmMXkwGGQskHeoPoDPW/9FiD6HDLN5rhqngkifwF03cpu6LGAsw==
 before_script: echo $VIRTUALENV_PYTHON
 script:
  - if [ "$VIRTUALENV_PYTHON" == "2.6" ]; then echo "bail out now"; exit 1; fi
  - echo "Waiting for 10 seconds"
  - sleep 10
- - cat name.txt
- - cp $filename ./name.txt
+ - cat $filename2
+ - cp $filename ./$filename2
  - cat $filename
- - cat name.txt
+ - cat $filename2
