@@ -5,6 +5,6 @@ python:
 install: echo "Nothing to install"
 script:
  - echo "hi"
- - sleep 7200
+ - sleep 1300
  - echo "Waiting for 60  minutes"
  
